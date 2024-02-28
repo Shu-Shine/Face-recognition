@@ -35,7 +35,7 @@ class OpenSetEvaluation:
         with open(test_data_file, 'rb') as f:
             (self.test_embeddings, self.test_labels) = pickle.load(f, encoding='bytes')
 
-    # ToDo:
+    
     # Run the evaluation and find performance measure (identification rates) at different similarity thresholds.
     def run(self):
 
@@ -85,13 +85,13 @@ class OpenSetEvaluation:
 
         return evaluation_results
 
-    # ToDo:
+    
     # calculates the similarity threshold for a given false alarm rate
     def select_similarity_threshold(self, similarity, false_alarm_rate):
 
         return np.percentile(similarity, (1 - false_alarm_rate) * 100)
 
-    # ToDo:
+    
     def calc_identification_rate(self, prediction_labels):
         # for test set of knowns
         f_knowns = self.test_labels != UNKNOWN_LABEL  # filter
