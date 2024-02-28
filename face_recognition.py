@@ -60,7 +60,7 @@ class FaceRecognizer:
         with open("recognition_gallery.pkl", 'rb') as f:
             (self.labels, self.embeddings) = pickle.load(f)
 
-    # ToDo
+    
     # update the new embedding and label
     def update(self, face, label):
         # extract embedding from an aligned face
@@ -71,7 +71,7 @@ class FaceRecognizer:
         self.embeddings = np.vstack((self.embeddings, embedding))
         return None
 
-    # ToDo
+    
     # predict the face label using k-NN
     def predict(self, face):
 
@@ -138,7 +138,7 @@ class FaceClustering:
         with open("clustering_gallery.pkl", 'rb') as f:
             (self.embeddings, self.num_clusters, self.cluster_center, self.cluster_membership) = pickle.load(f)
 
-    # ToDo:
+    
     # update the new embedding
     def update(self, face):
         # extract embedding from an aligned face
@@ -147,7 +147,7 @@ class FaceClustering:
         self.embeddings = np.vstack((self.embeddings, embedding))
         return None
     
-    # ToDo:
+    
     # cluster the embeddings using k-means
     def fit(self):
         # initialize cluster centers
@@ -179,7 +179,7 @@ class FaceClustering:
 
         return None
 
-    # ToDo:
+    
     def predict(self, face):
 
         embedding = self.facenet.predict(face)
