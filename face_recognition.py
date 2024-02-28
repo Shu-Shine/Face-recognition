@@ -36,7 +36,7 @@ class FaceRecognizer:
 
     # Prepare FaceRecognizer; specify all parameters for face identification.
     def __init__(self, num_neighbours=3, max_distance=0.9, min_prob=0.5): # num_neighbours=11, max_distance=0.8, min_prob=0.5
-        # ToDo: Prepare FaceNet and set all parameters for kNN.
+        # Prepare FaceNet and set all parameters for kNN.
         self.facenet = FaceNet()
         self.num_neighbours = num_neighbours
         self.max_distance = max_distance
@@ -108,7 +108,7 @@ class FaceClustering:
 
     # Prepare FaceClustering; specify all parameters of clustering algorithm.
     def __init__(self, num_clusters=5, max_iter=25):  # num_clusters=2, max_iter=25
-        # ToDo: Prepare FaceNet.
+        # Prepare FaceNet.
         self.facenet = FaceNet()
 
         # The underlying gallery: embeddings without class labels.
