@@ -18,12 +18,12 @@ class FaceDetector:
         # Size of face image after landmark-based alignment.
         self.aligned_image_size = aligned_image_size
 
-    # ToDo: Specify all parameters for template matching.
+    # Specify all parameters for template matching.
         self.tm_threshold = tm_threshold
         self.tm_window_size = tm_window_size  # extension size beyond the bounding box
 
 
-    # ToDo: Track a face in a new image using template matching.
+    # Track a face in a new image using template matching.
     def track_face(self, image):
         # Use the first detection as a reference
         if self.reference is None:
